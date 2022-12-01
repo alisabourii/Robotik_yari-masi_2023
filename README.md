@@ -1,1 +1,3 @@
-# Robotik_yari-masi_2023
+# Robotik Yarişmasi 2023
+
+Takım Adı: Robot 77
