@@ -1,3 +1,3 @@
 # Robotik Yarişmasi 2023
 
-Takım Adı: Robot 77
+Takım Adı: SERCAN YAZAR77
