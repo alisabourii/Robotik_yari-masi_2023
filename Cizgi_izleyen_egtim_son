@@ -1,0 +1,44 @@
+from js import robot
+import math
+
+robot.sleep(0.1)
+
+# Kodunuz Burada Basliyor
+
+
+while robot.is_ok():
+    data = robot.camera_pixel_array()
+    
+
+    pps = 0
+    index = 0
+    
+    '''for i in range(0, len(data)):
+        if data[i] > 50:
+            pps = pps + 1
+    
+    if pps > 0:
+        robot.move(0.1)
+        for i in range(0, len(data)):
+            m = 64
+            print(data[i])
+            if data[i] == m:
+                index = i
+
+        
+        
+        hata = len(data)/2 - index
+        Kp = 0.1
+        komut = hata*Kp
+        robot.rotate(komut)
+
+    else:
+        robot.move(0.0)
+        robot.rotate(0.5)'''
+
+# Max Bulma Algoritmasi
+    max = data[0]
+    for i in range(0 , len(data)):
+        if data[i] > max:
+            max = data[i]
+    
