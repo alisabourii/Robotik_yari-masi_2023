@@ -16,7 +16,7 @@ while robot.is_ok():
             pps = pps + 1
     
     if pps > 0:
-        robot.move(0.25)
+        robot.move(1.18)
         for i in range(0, len(data)):
             # Max Bulma Algoritmasi
             max = data[0]
@@ -29,7 +29,7 @@ while robot.is_ok():
         
         
         hata = len(data)/2 - index
-        Kp = 0.1
+        Kp = 0.6
         komut = hata*Kp
         robot.rotate(komut)
 
