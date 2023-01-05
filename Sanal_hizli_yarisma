@@ -1,0 +1,35 @@
+from js import robot
+import math
+
+# Kodunuz Burada Basliyor
+robot.move(5.0)
+while robot.is_ok():
+    data = robot.camera_pixel_array()
+    index = 0
+
+    
+    for i in range(0, len(data)):
+        # Max Bulma Algoritmasi
+        max = data[0]
+        for m in range(0 , len(data)):
+            if data[m] > max:
+                max = data[m]
+        if data[i] == max:
+            index = i 
+        hata = len(data)/2 - index
+        Kp = 0.54
+        komut = hata*Kp
+        robot.rotate(komut)
+        print(robot.time())
+        if robot.time()>0.85 and robot.time()<9.9:
+             robot.move(1.0)
+        if robot.time()>=9.9 and robot.time()<10.6:
+            robot.move(3.0)
+        if robot.time()>=10.6 and robot.time()<26.5:
+            robot.move(1.0)
+        if robot.time()>=26.9 and robot.time()<27.8:
+            robot.move(3.0)
+        if robot.time()>=27.8 and robot.time()<37.0: 
+            robot.move(1.0)
+        if robot.time()>=37:
+            robot.move(6.0) 
